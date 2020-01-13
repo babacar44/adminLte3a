@@ -24,3 +24,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 // })->where('any', '.*');
 
 Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d-/_.]+)?' );
+Route::get('users','UserController@index');
