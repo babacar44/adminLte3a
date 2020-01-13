@@ -30828,3 +30828,13 @@ readers do not read off random characters that represent icons */
   font-family: "Font Awesome 5 Brands";
 }
 
+.router-link-exact-active {
+  background-color: #ffc50c;
+  color: white !important;
+}
+
+.sidebar-dark-primary {
+  background-color: #000000;
+  color: black !important;
+}
+

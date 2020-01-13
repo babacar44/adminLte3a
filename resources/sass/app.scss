@@ -12,3 +12,12 @@ $fa-font-path: "../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+.router-link-exact-active{
+    background-color: #ffc50c;
+    color: white !important;
+}
+.sidebar-dark-primary{
+    background-color: #000000;
+    color: black !important;
+}
