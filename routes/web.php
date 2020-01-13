@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/{any}', function(){
-return view('layouts.master');
-})->where('any', '.*');
+// Route::get('/{any}', function(){
+// return view('layouts.master');
+// })->where('any', '.*');
+
+Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d-/_.]+)?' );

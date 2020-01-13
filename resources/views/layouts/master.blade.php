@@ -62,7 +62,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="./img/profile.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+            <a href="#" class="d-block" >
+                {{ Auth::user()->name }}
+                {{-- <p>{{ Auth::user()->type    }}</p> --}}
+            </a>
         </div>
       </div>
 
@@ -125,16 +128,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </p>
             </router-link>
             </li>
-
+            {{-- logout --}}
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-power-off"></i>
-                    <p>
-                    Logout
-                    {{-- <span class="right badge badge-danger">New</span> --}}
-                    </p>
+                <a class="nav-link" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                           <i class="nav-icon fas fa-power-off"></i>
+                        <p>
+                               
+                                {{ __('Logout') }}
+                        </p> 
                 </a>
-                </li>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
